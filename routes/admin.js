@@ -13,9 +13,7 @@ module.exports = function (app) {
 
     app.put('/api/users/:adminId',auth.editAdmin);
     app.delete('/api/users/:adminId',auth.deleteAdmin);
-   // app.post('/api/uploadlogo',news.uploadLogo);
     app.get('/api/news',news.getNews);
-   // app.post('/api/videos/applyfilter',videos.getVideos);
     app.post('/api/news',news.postNews);
     app.put('/api/news/:newsId',news.editNews);
     app.delete('/api/news/:newsId',news.deleteNews);

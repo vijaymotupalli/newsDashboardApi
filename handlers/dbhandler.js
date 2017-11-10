@@ -27,7 +27,6 @@ var dbHandler = {
 
     //admin
     login: function (email, password) {
-        console.log(email,password)
         return new Promise(function (resolve, reject) {
             models.admins.findOne({email: email, password: password}, {password: 0},function (err, admin) {
                     if (!err) {

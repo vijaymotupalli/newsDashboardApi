@@ -86,13 +86,15 @@ var news = {
         var title = req.body.title;
         var description = req.body.description;
         var newsId = req.params.newsId;
+        var image =  req.body.image;
 
         var newsData = {
             sourceUrl:sourceUrl,
             category:category,
             type:type,
             title: title,
-            description:description
+            description:description,
+            image:image,
         }
 
         dbhandler.editNews(newsId,newsData).then(function (news) {
@@ -125,7 +127,7 @@ var news = {
         var upload = multer({
             storage: multerS3({
                 s3: s3,
-                bucket: 'codeuniverse',
+                bucket: 'vrscience',
                 acl: 'public-read',
                 contentType: multerS3.AUTO_CONTENT_TYPE,
                 key: function (req, file, cb) {

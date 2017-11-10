@@ -4,8 +4,8 @@ var config = {
         host:'mongodb://127.0.0.1/newsupload',
         port: 27017,
         database: "newsupload",
-        username:"admin",
-        password:"123456"
+        username:"spurtree",
+        password:"spur2win"
     },
     server:{
       host:'localhost',
